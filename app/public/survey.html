@@ -5,20 +5,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <title>Friend Finder</title>
-</head>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                
-            </div>
-        </div>
-    </div>
-<body>
+    <script type="text/javascript" src="../../index.js"></script>
 
+    <style>
+        .basic {
+            margin-bottom: 20px;
+        }
+
+        body {
+            padding-bottom: 60px;
+            padding-left: 40px;
+        }
+
+        #final {
+            margin-top: 20px;
+        }
+
+        .pick {
+            visibility: hidden;
+            width: 25px;
+        }
+
+        ul {
+            display: none;
+        }
+    </style>
+    <title>Go get your fuckin' shinebox</title>
+
+</head>
+
+<body>
+    <h3>Survey Questions</h3>
+    <hr>
+    <h4>About You</h4>
+    <h6>Name (Required)</h6>
+    <input class="basic" id="handle" type="text">
+    <h6>Link to Photo Image (Required)</h6>
+    <input class="basic" id="photo" type="text">
+    <hr>
+    <h4>Question One</h4>
+    <p>insert question here</p>
+    <button class="answers" id="first">Select an Option &#9660;</button>
+    <input class="pick" id="ichi" type="text">
+    <ul id="firstlist">
+        <li class="one" data-option="1">1 (Strongly Disagree)</li>
+        <li class="one" data-option="2">2</li>
+        <li class="one" data-option="3">3</li>
+        <li class="one" data-option="4">4</li>
+        <li class="one" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Two</h4>
+    <p>insert question here</p>
+    <button class="answers" id="second">Select an Option &#9660;</button>
+    <input class="pick" id="ni" type="text">
+    <ul id="secondlist">
+        <li class="two" data-option="1">1 (Strongly Disagree)</li>
+        <li class="two" data-option="2">2</li>
+        <li class="two" data-option="3">3</li>
+        <li class="two" data-option="4">4</li>
+        <li class="two" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Three</h4>
+    <p>insert question here</p>
+    <button class="answers" id="third">Select an Option &#9660;</button>
+    <input class="pick" id="san" type="text">
+    <ul id="thirdlist">
+        <li class="three" data-option="1">1 (Strongly Disagree)</li>
+        <li class="three" data-option="2">2</li>
+        <li class="three" data-option="3">3</li>
+        <li class="three" data-option="4">4</li>
+        <li class="three" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Four</h4>
+    <p>insert question here</p>
+    <button class="answers" id="fourth">Select an Option &#9660;</button>
+    <input class="pick" id="shi" type="text">
+    <ul id="fourthlist">
+        <li class="four" data-option="1">1 (Strongly Disagree)</li>
+        <li class="four" data-option="2">2</li>
+        <li class="four" data-option="3">3</li>
+        <li class="four" data-option="4">4</li>
+        <li class="four" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Five</h4>
+    <p>insert question here</p>
+    <button class="answers" id="fifth">Select an Option &#9660;</button>
+    <input class="pick" id="go" type="text">
+    <ul id="fifthlist">
+        <li class="five" data-option="1">1 (Strongly Disagree)</li>
+        <li class="five" data-option="2">2</li>
+        <li class="five" data-option="3">3</li>
+        <li class="five" data-option="4">4</li>
+        <li class="five" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Six</h4>
+    <p>insert question here</p>
+    <button class="answers" id="sixth">Select an Option &#9660;</button>
+    <input class="pick" id="roku" type="text">
+    <ul id="sixthlist">
+        <li class="six" data-option="1">1 (Strongly Disagree)</li>
+        <li class="six" data-option="2">2</li>
+        <li class="six" data-option="3">3</li>
+        <li class="six" data-option="4">4</li>
+        <li class="six" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Seven</h4>
+    <p>insert question here</p>
+    <button class="answers" id="seventh">Select an Option &#9660;</button>
+    <input class="pick" id="nana" type="text">
+    <ul id="seventhlist">
+        <li class="seven" data-option="1">1 (Strongly Disagree)</li>
+        <li class="seven" data-option="2">2</li>
+        <li class="seven" data-option="3">3</li>
+        <li class="seven" data-option="4">4</li>
+        <li class="seven" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Eight</h4>
+    <p>insert question here</p>
+    <button class="answers" id="eighth">Select an Option &#9660;</button>
+    <input class="pick" id="hachi" type="text">
+    <ul id="eighthlist">
+        <li class="eight" data-option="1">1 (Strongly Disagree)</li>
+        <li class="eight" data-option="2">2</li>
+        <li class="eight" data-option="3">3</li>
+        <li class="eight" data-option="4">4</li>
+        <li class="eight" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Nine</h4>
+    <p>insert question here</p>
+    <button class="answers" id="ninth">Select an Option &#9660;</button>
+    <input class="pick" id="ku" type="text">
+    <ul id="ninthlist">
+        <li class="nine" data-option="1">1 (Strongly Disagree)</li>
+        <li class="nine" data-option="2">2</li>
+        <li class="nine" data-option="3">3</li>
+        <li class="nine" data-option="4">4</li>
+        <li class="nine" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <h4>Question Ten</h4>
+    <p>insert question here</p>
+    <button class="answers" id="tenth">Select an Option &#9660;</button>
+    <input class="pick" id="ju" type="text">
+    <ul id="tenthlist">
+        <li class="ten" data-option="1">1 (Strongly Disagree)</li>
+        <li class="ten" data-option="2" id="nixon">2</li>
+        <li class="ten" data-option="3">3</li>
+        <li class="ten" data-option="4">4</li>
+        <li class="ten" data-option="5">5 (Strongly Agree)</li>
+    </ul>
+    <br>
+    <button id="final" type="submit">Submit!</button>
 </body>
 
 </html>
