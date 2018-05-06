@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const survey = require('./app/public/home.html')
+// const survey = require('./app/public/home.html')
 
 
 
