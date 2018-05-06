@@ -28,22 +28,22 @@ app.get("/api/friends", function (req, res) {
 
 
 
-app.get("/survey", function(req, res) {
-   
-   res.sendFile(path.join(__dirname, "./app/public/survey.html"));
- });
+app.get("/survey", function (req, res) {
+    res.set({ 'content-type': 'application/javascript' })
+    res.sendFile(path.join(__dirname, "./app/public/survey.html"));
+});
 
-// app.use(require("./test.js"), function(req, res) {
-   
- 
-//  });
 
 app.get("*", function (req, res) {
-
+    res.set({ 'content-type': 'application/javascript' })
     res.sendFile(path.join(__dirname, "./app/public/home.html"));
 });
 
 
+
+
+
+//Initialize listening command on Terminal
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 
