@@ -29,13 +29,12 @@ app.get("/api/friends", function (req, res) {
 
 
 app.get("/survey", function (req, res) {
-    res.set({ 'content-type': 'application/javascript' })
+    res.set({ 'content-type': 'text/javascript' })
     res.sendFile(path.join(__dirname, "./app/public/survey.html"));
 });
 
 
 app.get("*", function (req, res) {
-    res.set({ 'content-type': 'application/javascript' })
     res.sendFile(path.join(__dirname, "./app/public/home.html"));
 });
 
