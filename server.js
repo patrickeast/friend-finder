@@ -29,7 +29,7 @@ app.get("/api/friends", function (req, res) {
 
 
 app.get("/survey", function (req, res) {
-    res.set({ 'content-type': 'text/javascript' })
+    res.setHeader({ 'content-type': 'text/javascript' })
     res.sendFile(path.join(__dirname, "./app/public/survey.html"));
 });
 
