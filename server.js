@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const survey = require('./app/public/home.html')
 
 
 
@@ -29,7 +30,7 @@ app.get("/api/friends", function (req, res) {
 
 app.get("/survey", function(req, res) {
    
-   res.sendFile(path.join(__dirname, "app/public/survey.html"));
+   res.sendFile(path.join(__dirname, "./app/public/survey.html"));
  });
 
 // app.use(require("./test.js"), function(req, res) {
@@ -39,7 +40,7 @@ app.get("/survey", function(req, res) {
 
 app.get("*", function (req, res) {
 
-    res.sendFile(path.join(__dirname, "app/public/home.html"));
+    res.sendFile(path.join(__dirname, "./app/public/home.html"));
 });
 
 
