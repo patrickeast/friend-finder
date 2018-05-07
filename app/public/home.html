@@ -8,37 +8,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Friend Finder</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container d-flex align-items-center h-100">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 h-100 text-center">
                 <h1>Welcome to Friend Finder.</h1>
                 <br>
-                <p>Are you ready to find your match? Click below to take a comprehensive, industry-proven, earth-shattering
-                    survey to match you with your <b>soul friend</b>.</p>
+                <h4>Are you ready to find your match?
+                    Click below to take a comprehensive,
+                    industry-proven, earth-shattering survey
+                    to match you with your
+                    <b>soul friend</b>.
+                </h4>
+                <br>
+                <a class="btn btn-lg btn-primary" href="/survey/" role="button">Take the Survey</a>
+                <br>
+                <br>
+                <p class="bold">
+                    <a class="text-white" href="/api/friends">API Friends Link</a> |
+                    <a class="text-white" href="https://github.com/patrickeast/friend-finder" target="_blank">GitHub Repo</a>
+                </p>
             </div>
         </div>
     </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <a class="btn btn-primary" href="/survey/" role="button">Take the Survey</a>
-            </div>
-        </div>
-    </div>
-    <br>
-    <footer class="footer">
-        <div class="container">
-            <p class="bold">
-                <a href="/api/friends">API Friends Link</a> |
-                <a href="https://github.com/patrickeast/friend-finder" target="_blank">GitHub Repo</a>
-            </p>
-        </div>
-    </footer>
 </body>
 
 </html>
