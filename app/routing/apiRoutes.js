@@ -1,65 +1,42 @@
-var userinfoJSON = {};
+var friends = require('../data/friends.js');
 
-var express = require("express");
-var bodyParser = require("body - parser");
-var path = require("path");
+module.exports = function (app) {
+    app.get('/api/friends', function (req, res) {
+        res.json(friends);
+    });
 
+    app.post('/api/friends', function (req, res) {
+        let newFriend = req.body;
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+        let friendMatch = {};
 
+        for (let i = 0; i < newFriend.scores.length; i++) {
+            newFriend.scores[i] = parseInt(newFriend.scores[i]);
+            }
 
+        let bestMatchIndex = 0;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+        let bestMatchDifference = 40;
 
-var example = {
-    one: "fuck",
-    two: "this",
-    three: "shit"
-}
+        for (let i = 0; i < friends.length; i++) {
+            let totalDifference = 0;
 
+            for (let j = 0; j < friends[i].scores.length; j++) {
+                let differenceOneScore = Math.abs(friends[i].scores[j] - newFriend.scores[j]);
+                totalDifference += differenceOneScore;
+            }
 
+            if (totalDifference < bestMatchDifference) {
+                bestMatchIndex = i;
+                bestMatchDifference = totalDifference;
+            }
+        }
 
+        bestMatch = friends[bestMatchIndex];
 
-app.get("/api/friends", function (req, res) {
+        friends.push(newFriend);
 
-    return res.json(example);
-});
+        res.json(bestMatch);
+    });
 
-
-
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-});
-
-var userinfoJSON = {};
-
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
-
-
-var app = express();
-var PORT = process.env.PORT || 3000;
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-
-
-
-app.get("/survey", function(req, res) {
-   // res.send("Welcome to the Star Wars Page!")
-   res.sendFile(path.join(__dirname, "../public/survey.html"));
- });
-
-
-app.get("*", function (req, res) {
-    // res.send("Welcome to the Star Wars Page!")
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-});
-
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-});
+};

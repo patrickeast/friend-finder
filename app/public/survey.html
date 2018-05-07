@@ -8,156 +8,254 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../../index.js"></script>
 
-    <style>
-        .basic {
-            margin-bottom: 20px;
-        }
-
-        body {
-            padding-bottom: 60px;
-            padding-left: 40px;
-        }
-
-        #final {
-            margin-top: 20px;
-        }
-
-        .pick {
-            visibility: hidden;
-            width: 25px;
-        }
-
-        ul {
-            display: none;
-        }
-    </style>
-    <title>Go get your fuckin' shinebox</title>
+    <title>Friend Survey</title>
 
 </head>
 
 <body>
-    <h3>Survey Questions</h3>
-    <hr>
-    <h4>About You</h4>
-    <h6>Name (Required)</h6>
-    <input class="basic" id="handle" type="text">
-    <h6>Link to Photo Image (Required)</h6>
-    <input class="basic" id="photo" type="text">
-    <hr>
-    <h4>Question One</h4>
-    <p>insert question here</p>
-    <button class="answers" id="first">Select an Option &#9660;</button>
-    <input class="pick" id="ichi" type="text">
-    <ul id="firstlist">
-        <li class="one" data-option="1">1 (Strongly Disagree)</li>
-        <li class="one" data-option="2">2</li>
-        <li class="one" data-option="3">3</li>
-        <li class="one" data-option="4">4</li>
-        <li class="one" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Two</h4>
-    <p>insert question here</p>
-    <button class="answers" id="second">Select an Option &#9660;</button>
-    <input class="pick" id="ni" type="text">
-    <ul id="secondlist">
-        <li class="two" data-option="1">1 (Strongly Disagree)</li>
-        <li class="two" data-option="2">2</li>
-        <li class="two" data-option="3">3</li>
-        <li class="two" data-option="4">4</li>
-        <li class="two" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Three</h4>
-    <p>insert question here</p>
-    <button class="answers" id="third">Select an Option &#9660;</button>
-    <input class="pick" id="san" type="text">
-    <ul id="thirdlist">
-        <li class="three" data-option="1">1 (Strongly Disagree)</li>
-        <li class="three" data-option="2">2</li>
-        <li class="three" data-option="3">3</li>
-        <li class="three" data-option="4">4</li>
-        <li class="three" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Four</h4>
-    <p>insert question here</p>
-    <button class="answers" id="fourth">Select an Option &#9660;</button>
-    <input class="pick" id="shi" type="text">
-    <ul id="fourthlist">
-        <li class="four" data-option="1">1 (Strongly Disagree)</li>
-        <li class="four" data-option="2">2</li>
-        <li class="four" data-option="3">3</li>
-        <li class="four" data-option="4">4</li>
-        <li class="four" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Five</h4>
-    <p>insert question here</p>
-    <button class="answers" id="fifth">Select an Option &#9660;</button>
-    <input class="pick" id="go" type="text">
-    <ul id="fifthlist">
-        <li class="five" data-option="1">1 (Strongly Disagree)</li>
-        <li class="five" data-option="2">2</li>
-        <li class="five" data-option="3">3</li>
-        <li class="five" data-option="4">4</li>
-        <li class="five" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Six</h4>
-    <p>insert question here</p>
-    <button class="answers" id="sixth">Select an Option &#9660;</button>
-    <input class="pick" id="roku" type="text">
-    <ul id="sixthlist">
-        <li class="six" data-option="1">1 (Strongly Disagree)</li>
-        <li class="six" data-option="2">2</li>
-        <li class="six" data-option="3">3</li>
-        <li class="six" data-option="4">4</li>
-        <li class="six" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Seven</h4>
-    <p>insert question here</p>
-    <button class="answers" id="seventh">Select an Option &#9660;</button>
-    <input class="pick" id="nana" type="text">
-    <ul id="seventhlist">
-        <li class="seven" data-option="1">1 (Strongly Disagree)</li>
-        <li class="seven" data-option="2">2</li>
-        <li class="seven" data-option="3">3</li>
-        <li class="seven" data-option="4">4</li>
-        <li class="seven" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Eight</h4>
-    <p>insert question here</p>
-    <button class="answers" id="eighth">Select an Option &#9660;</button>
-    <input class="pick" id="hachi" type="text">
-    <ul id="eighthlist">
-        <li class="eight" data-option="1">1 (Strongly Disagree)</li>
-        <li class="eight" data-option="2">2</li>
-        <li class="eight" data-option="3">3</li>
-        <li class="eight" data-option="4">4</li>
-        <li class="eight" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Nine</h4>
-    <p>insert question here</p>
-    <button class="answers" id="ninth">Select an Option &#9660;</button>
-    <input class="pick" id="ku" type="text">
-    <ul id="ninthlist">
-        <li class="nine" data-option="1">1 (Strongly Disagree)</li>
-        <li class="nine" data-option="2">2</li>
-        <li class="nine" data-option="3">3</li>
-        <li class="nine" data-option="4">4</li>
-        <li class="nine" data-option="5">5 (Strongly Agree)</li>
-    </ul>
-    <h4>Question Ten</h4>
-    <p>insert question here</p>
-    <button class="answers" id="tenth">Select an Option &#9660;</button>
-    <input class="pick" id="ju" type="text">
-    <ul id="tenthlist">
-        <li class="ten" data-option="1">1 (Strongly Disagree)</li>
-        <li class="ten" data-option="2" id="nixon">2</li>
-        <li class="ten" data-option="3">3</li>
-        <li class="ten" data-option="4">4</li>
-        <li class="ten" data-option="5">5 (Strongly Agree)</li>
-    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Survey Questions</h3>
+            </div>
+        </div>
+    </div>
     <br>
-    <button id="final" type="submit">Submit!</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-default">
+                    <div class="card-header">
+                        About You
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="name">What is your Name?</label>
+                            <input type="text" class="form-control" id="name" placeholder="First and Last">
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Link to Your Photo</label>
+                            <input type="text" class="form-control" id="photo" placeholder="Paste the URL here">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card card-default">
+                    <div class="card-header">
+                        Answer the following questions on a scale of 1 (Strongly Disagree) to 5 (Strongly Agree).
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">1) You are married.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q1">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">2) You are an outgoing person.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q2">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">3) You dislike puppies.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q3">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">4) You are likely to wake up next to a dead body.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q4">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">5) You enjoy eating dead animals.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q5">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">6) Convicted criminals turn you on.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q6">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">7) The Roseanne reboot is kind of the best thing to ever happen to TV.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q7">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">8) Teeth are important to you in a lover.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q8">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">9) If forced to compare to yourself to a character in Game of Thrones, you would most likely
+                                choose Little Finger.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q9">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">10) Your favorite flavor of ice cream is Neopolitan.</label>
+                            <select class="form-control form-control-sm col-sm-1" id="q10">
+                                <option>--</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <br>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#resultsModal" id="submit">Submit Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Soul Friend is:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="matchName"></h4>
+                    <img id="matchImg" src="" alt="" height="350" width="300">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-danger" id="closeModal" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <p class="bold">
+                <a href="/api/friends">API Friends Link</a> |
+                <a href="https://github.com/patrickeast/friend-finder" target="_blank">GitHub Repo</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Grab the URL of the website
+        var currentURL = window.location.origin;
+        // Capture the form inputs
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+            if (($('#name').val().trim() !== "") && ($('#photo').val().trim() !== "")) {
+
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+                }
+                console.log(userData);
+
+                $.post(currentURL + "/api/friends", userData, function (data) {
+
+                    $("#matchName").text(data.name);
+                    $('#matchImg').attr("src", data.photo);
+
+                    $("#resultsModal").modal('toggle');
+
+                    $("#name").val("");
+                    $("#photo").val("");
+                });
+            } else if ($("#q1").val() === 1) {
+                $(".modal-title").text("Missing required information");
+                $(".modal-body").html("<h3>Please complete the form before submitting</h3>");
+                $("#resultsModal").modal('toggle');
+            }
+            return false;
+        });
+        // modal logic
+        $('#closeModal').click(function () {
+            $.get('/', function (req, res) {
+                location.replace(res);
+            })
+        });
+    </script>
 </body>
 
 </html>

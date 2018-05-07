@@ -1,50 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-// const survey = require('./app/public/home.html')
 
-
+const friends = require('./app/data/friends.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(express.static('app/public'));
 
-
-const example = {
-    one: 'fuck',
-    two: 'this',
-    three: 'shit'
-}
-
-
-
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
 
-app.get("/api/friends", function (req, res) {
+require('./app/routing/apiRoutes.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 
-    return res.json(example);
-});
-
-
-
-app.get("/survey", function (req, res) {
-    res.setHeader({ 'content-type': 'text/javascript' })
-    res.sendFile(path.join(__dirname, "./app/public/survey.html"));
-});
-
-
-app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./app/public/home.html"));
-});
-
-
-
-
-
-//Initialize listening command on Terminal
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-
-
+app.listen(PORT, function() {
+    console.log("App listening on port: " + PORT);
 });
