@@ -1,0 +1,18 @@
+body {
+    background-image: url("bg-Full.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+}
+
+h1, h4 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+}
